@@ -18,7 +18,7 @@ A simple, modern, and fully responsive To-Do List application built by **Yashwan
 
 ## Usage
 
-1. **Add a Task:** Type in the task and click "Add" to include it in the list.
+1. **Add a Task:** Type in the task and click "Save" to include it in the list.
 2. **Complete a Task:** Click on the task to mark it as complete.
 3. **Delete a Task:** Click the "Delete" button to remove a task from the list.
 
