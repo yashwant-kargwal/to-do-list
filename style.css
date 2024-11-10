@@ -1,0 +1,213 @@
+@font-face {
+    font-family: yashwant;
+    src: url(private/fonts/Poppins-Medium.ttf);
+}
+:root{
+    --pink-- : #cd396c;
+    --blue-- : #4b93b3;
+    --grey-- : #6d6e73;
+    --white-- :#fff;
+    --bordercolor-- : #ddd;
+    --text-- : #333;
+}
+*{
+    margin:0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: yashwant;
+}
+body{
+    background: linear-gradient(150deg, var(--blue--), var(--white--));
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.container{
+    height: fit-content;
+    width: 100%;
+    max-width: 500px;
+    margin-left: 20px;
+    padding: 30px;
+    border-radius: 12px;
+    border: 2px solid var(--white--);
+    background: var(--white--);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+.container:hover{
+    transform: translateY(-5px);
+}
+.heading{
+    padding: 10px 20px;
+    color: var(--text--);
+}
+.data{
+    padding: 10px;
+    margin-bottom: 20px;
+    width: 100%;
+}
+.input-data{
+    display: flex;
+    margin-bottom: 20px;
+}
+.input-data input, select, input:active, input:focus-visible, input:focus{
+    border: 1px solid var(--bordercolor--);
+    outline: none;
+    padding: 10px;
+    font-size: 16px;
+}
+.input-data select{
+    cursor: pointer;
+    background: #f1f1f1;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+.input-data input{
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    width: 100%;
+}
+.button-group{
+    display: flex;
+    gap: 10px;
+}
+.btn{
+    padding: 10px 20px;
+    background-color: var(--text--);
+    color: var(--white--);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.btn:hover{
+    background-color: #555;
+}
+.btn:active{
+    transform: scale(0.9);
+}
+
+.container-list{
+    height: calc(100vh - 20px);
+    min-height: 400px;
+    width: 100%;
+    max-width: 500px;
+    margin-right: 20px;
+    margin-left: 20px;
+    padding: 10px;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    border-radius: 8px;
+    border: 2px solid var(--white--);
+    background: var(--white--);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+.container-list h2{
+    color: var(--text--);
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+ul{
+    width: 100%;
+}
+li{
+    list-style: none;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    padding: 5px 10px;
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 5px;
+    animation: fadin 0.5s ease-in;
+}
+@keyframes fadin {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.task-edits{
+    margin-top: 3px;
+    font-size: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--text--);
+}
+.task-edits div{
+    display: flex;
+    gap: 3px;
+}
+.done{
+    background-color: #28a745;
+}
+.done:hover{
+    background-color: #169433;
+}
+.delete{
+    background-color: rgb(230, 42, 42);
+}
+.delete:hover{
+    background-color: rgb(194, 28, 28);
+}
+.libtn{
+    color: var(--white--);
+    border: none;
+    border-radius: 5px;
+    padding: 4px 8px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+.libtn:active{
+    transform: scale(0.9);
+}
+
+.taskdone{
+    text-decoration: line-through;
+    opacity: 0.8;
+    background-color: #169433;
+}
+@media (min-width:566px) and (max-width:768px) {
+    .container{
+        padding: 10px;
+    }
+    .heading h1{
+        font-size: 30px;
+    }
+    .input-data select{
+        width: 50%;
+    }
+}
+@media (max-width:566px) {
+    body{
+        flex-direction: column;
+    }
+    .container{
+        margin: 10px;
+        padding: 10px;
+        width: 90%;
+    }
+    .data{
+        margin: 0px;
+    }
+    .input-data select{
+        width: 50%;
+    }
+    .heading h1{
+        font-size: 30px;
+    }
+    .container-list{
+        margin: 10px;
+        width: 90%;
+    }
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List | Yashwant Kargwal</title>
+    <link rel="shortcut icon" href="private/Favicon/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="private/Favicon/apple-touch-icon.png" type="image/png">
+    <link rel="icon" href="private/Favicon/android-chrome-192x192.png" sizes="192 x 192" type="image/png">
+    <link rel="stylesheet" href="style.css">
+    <meta name="description" content="TO Do List project develop by Yashwant Kargwal in HTML&CSS and Javascript">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="container">
+        <div class="heading">
+            <h1>To Do List</h1>
+        </div>
+        <div class="data">
+            <div class="input-data">
+                <input id="input" title="Enter Your Task!" type="text" placeholder="Add new task..." required>
+                <select title="Select Category" id="category">
+                    <option value="Uncategory">Uncateogry</option>
+                    <option value="Work">Work</option>
+                    <option value="Personal">Personal</option>
+                    <option value="Shopping">Shopping</option>
+                </select>
+            </div>
+            <div class="button-group">
+                <button class="btn" id="save" >Save</button>
+                <button class="btn" type="reset" onclick="reset()">Reset</button>
+            </div>
+        </div>
+    </div>
+    <div class="container-list">
+        <h2>Your Tasks</h2>
+        <ul class="tasklist" id="tasklist">
+            
+        </ul>
+    </div>
+
+    <noscript>This App needs Javascript to run</noscript>
+    <script src="app.js"></script>
+</body>
+</html>
